@@ -1,10 +1,81 @@
-.App {
+/*.App {
   text-align: center;
-}
+}*/
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.bunny{
+  width: 80px;
+  height: 80px;
+}
+.nutrition{
+  width: 300px;
+  height: 300px;
+}
+.carrot_con{
+  z-index: 2;
+}
+.carrot{
+  width: 300px;
+  height: 300px;
+}
+.cryingbun{
+    width: 200px;
+  height: 200px;
+  margin-top: 50px;
+
+}
+
+.carrot1{
+  transform: rotate(-10deg);
+  position: absolute;
+    top: 40%;
+    cursor: pointer;
+}
+.carrot2{
+  transform: rotate(10deg);
+  position: absolute;
+    top:43%;
+    left: 8%;
+    cursor: pointer;
+}
+.carrot3{
+  transform: rotate(23deg);
+  position: absolute;
+    top:43%;
+    left: 20%;
+    cursor: pointer;
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.info_con{
+    margin-left: 50%;
+}
+.pull_carrots{
+  position: absolute;
+  top: 29%;
+  left: 10%;
+}
+.carrot1.floating {
+  animation: floatUp 1s ease-in-out;
+}
+.carrot2.floating {
+  animation: floatUp 1s ease-in-out;
+}
+.carrot3.floating {
+  animation: floatUp 1s ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,7 +84,7 @@
   }
 }
 
-.App-header {
+/*.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,12 +93,36 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+}*/
 
 .App-link {
   color: #61dafb;
 }
+.header{
+  background-color:#2c3e4e;
+  color:white;
+  height: auto;
+  display:flex;
+  padding-bottom:5px;
 
+  h1{
+    margin-top: 14px;
+  }
+
+}
+.animate_con{
+}
+.grass{
+  position: absolute;
+    top: 30%;
+    left: 3%;
+    z-index: 3;
+    pointer-events: none;
+}
+.carrot_con{
+  display: flex;
+/*  position: absolute;*/
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
