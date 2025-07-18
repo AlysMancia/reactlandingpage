@@ -22,12 +22,21 @@
   height: 300px;
 }
 .cryingbun{
-    width: 200px;
+  width: 200px;
   height: 200px;
   margin-top: 50px;
 
 }
-
+.rabbitpic{
+    width: 500px;
+  height: 500px;
+}
+.my-carousel {
+  width: 50%;
+  margin: 30px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
 .carrot1{
   transform: rotate(-10deg);
   position: absolute;

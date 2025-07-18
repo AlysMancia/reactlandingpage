@@ -2,11 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './about.js'
+import { Carousel } from 'react-bootstrap';
 
 function App() {
   const [floatingCarrot, setFloatingCarrot] = useState(null);
   const [showFacts, setShowFacts] = useState(false); 
   const [showKnow, setShowKnow] = useState(false); 
+  const [showPet, setShowPet] = useState(false); 
+
 
 
   const handleCarrotClick = (carrotId) => {
@@ -22,6 +25,11 @@ function App() {
       setShowKnow(true); 
     } else {
       setShowKnow(false);
+    }
+     if (carrotId === 'carrot3') {
+      setShowPet(true); 
+    } else {
+      setShowPet(false);
     }
 
   
@@ -76,6 +84,56 @@ function App() {
       </div>
     );
   };
+  const pet = () => {
+    return (
+      <div className="pet">
+
+        <Carousel className="my-carousel">
+            <Carousel.Item>
+              <img
+                className="d-block w-200 rabbitpic"
+                src="/1.png"
+                alt="First slide"
+                className="rabbitpic"
+              />
+              <Carousel.Caption>
+                {/*<h3>Meet Bunbun</h3>*/}
+                {/*<p>This rabbit loves carrots!</p>*/}
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-200 rabbitpic"
+                src="/2.png"
+                alt="Second slide"
+                className="rabbitpic"
+              />
+              <Carousel.Caption>
+                {/*<h3>Fluffy Friends</h3>*/}
+                {/*<p>They are very social!</p>*/}
+              </Carousel.Caption>
+            </Carousel.Item>
+
+            <Carousel.Item>
+              <img
+                className="d-block w-200 rabbitpic"
+                src="/3.png"
+                alt="Third slide"
+                className="rabbitpic"
+              />
+              <Carousel.Caption>
+                {/*<h3>Happy Bunny</h3>*/}
+                {/*<p>This one just did a binky!</p>*/}
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+                  <h2>RABBIT AS A PET!</h2>
+        <p>Do you want one?</p>
+
+      </div>
+    );
+  };
 
   return (
     <div className="App">
@@ -115,6 +173,7 @@ function App() {
         {floatingCarrot && <p>{carrotInfo[floatingCarrot]}</p>}
         {showFacts  &&  ( <>{facts()} <About /> </>)}
         {showKnow && know()}
+        {showPet && pet()}
       </div>
     </div>
   );
